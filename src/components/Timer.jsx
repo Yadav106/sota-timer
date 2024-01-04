@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import doomss from "../assets/doomss.png"
 
 const Timer = () => {
 	const [days, setDays] = useState(0);
@@ -27,25 +28,75 @@ const Timer = () => {
   }
 
   return (
-    <div>
-      <div className="countdown-container">
-				<div className="countdown-values">
-					<div className="countdown-value">
-						<p className="big-text">{days}</p>
-						<span>days</span>
+    <div className='text-white'>
+			<div className='flex flex-col justify-center items-center gap-[30px] sm:hidden text-white'>
+				<p className='text-[40px]'>
+					Embrace
+				</p>
+				<div className='flex flex-col gap-[40px]'>
+					<div className='flex gap-[40px]'>
+						<div className='h-[130px] w-[130px] flex flex-col justify-center items-center bg-gray-700/70 rounded-xl'>
+							<p className='text-[40px]'>
+								{days}
+							</p>
+							<span>days</span>
+						</div>
+						<div className='h-[130px] w-[130px] flex flex-col justify-center items-center bg-gray-700/70 rounded-xl'>
+							<p className='text-[40px]'>
+								{hours}
+							</p>
+							<span>hours</span>
+						</div>
 					</div>
-					<div className="countdown-value">
-						<p className="big-text">{hours}</p>
-						<span>hours</span>
+					<div className='flex gap-[40px]'>
+						<div className='h-[130px] w-[130px] flex flex-col justify-center items-center bg-gray-700/70 rounded-xl'>
+							<p className='text-[40px]'>
+								{minutes}
+							</p>
+							<span>mins</span>
+						</div>
+						<div className='h-[130px] w-[130px] flex flex-col justify-center items-center bg-gray-700/70 rounded-xl'>
+							<p className='text-[40px]'>
+								{seconds}
+							</p>
+							<span>seconds</span>
+						</div>
 					</div>
-					<div className="countdown-value">
-						<p className="big-text">{minutes}</p>
-						<span>mins</span>
+				</div>
+				<img src={doomss} alt="doomss" className='w-[97%] mt-[50px]' />
+			</div>
+			<div className='hidden sm:block'>
+				<div className='flex-col items-center'>
+					<div className='flex w-full justify-center items-center mb-[50px] text-[80px]'>
+						Embrace
 					</div>
-					<div className="countdown-value">
-						<p className="big-text">{seconds}</p>
-						<span>seconds</span>
+					<div className='flex gap-[50px]'>
+						<div className='h-[130px] w-[130px] flex flex-col justify-center items-center bg-gray-700/70 rounded-xl'>
+							<p className='text-[40px]'>
+								{days}
+							</p>
+							<span>days</span>
+						</div>
+						<div className='h-[130px] w-[130px] flex flex-col justify-center items-center bg-gray-700/70 rounded-xl'>
+							<p className='text-[40px]'>
+								{hours}
+							</p>
+							<span>hours</span>
+						</div>
+						<div className='h-[130px] w-[130px] flex flex-col justify-center items-center bg-gray-700/70 rounded-xl'>
+							<p className='text-[40px]'>
+								{minutes}
+							</p>
+							<span>mins</span>
+						</div>
+						<div className='h-[130px] w-[130px] flex flex-col justify-center items-center bg-gray-700/70 rounded-xl'>
+							<p className='text-[40px]'>
+								{seconds}
+							</p>
+							<span>seconds</span>
+						</div>
 					</div>
+					<img src={doomss} alt="doomss" className='h-[300px] w-[97%] mt-[50px]' />
 				</div>
 			</div>
     </div>
